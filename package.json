@@ -3,10 +3,18 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "dev": "bun --watch run ./src/main.ts"
   },
-  "peerDependencies": {
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.31.1",
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.0",
+    "drizzle-orm": "^0.44.2",
+    "hono": "^4.7.11",
+    "zod": "^3.25.51"
   }
 }
