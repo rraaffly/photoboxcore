@@ -6,6 +6,9 @@ const client = new SQL({
   port: 5432,
   user: "postgres",
   password: "root",
-  database: "photobox",
+  database: "photoboxapp",
+
+  max: 5,
 });
-export const db = drizzle({ client, casing: "snake_case" });
+
+export const db = drizzle({ client, casing: "snake_case", logger: true });
